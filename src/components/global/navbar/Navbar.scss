@@ -11,6 +11,7 @@
     gap: 15px;
   }
   a {
+    color: black;
     text-decoration: none;
     padding: 0 10px;
   }
@@ -21,6 +22,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media all and (max-width: 575px) {
+      padding: 15px 0;
+    }
   }
 
   .logo {
@@ -36,7 +40,9 @@
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     transition: all 0.3s ease-in-out;
-
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
     &:hover {
       transform: scale(1.05);
     }
@@ -57,20 +63,44 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    @media all and (max-width: 575px) {
+      gap: 8px;
+    }
   }
 
   .login-btn {
     background: linear-gradient(to bottom right, #5391ff, #b965ff);
     padding: 6px 31px;
     color: white;
-
+    @media all and (max-width: 575px) {
+      display: none;
+      padding: 4px 12px;
+    }
     &:hover {
       background: linear-gradient(to bottom right, #b965ff, #5391ff);
     }
   }
 
   .theme-btn {
+    display: flex;
+    align-items: center;
     padding: 5px 25px;
+    span {
+      @media all and (max-width: 575px) {
+        display: none;
+      }
+    }
+
+    @media all and (max-width: 575px) {
+      padding: 2px 5px;
+    }
+  }
+
+  .menu-bar{
+    display: none;
+    @media all and (max-width: 1024px) {
+      display: block;
+    }
   }
 
   //   light mode
@@ -96,7 +126,6 @@
     }
 
     .theme-btn {
-      padding: 5px 25px;
       border: 1px solid black;
     }
   }
@@ -125,9 +154,8 @@
     }
 
     .theme-btn {
-      padding: 5px 25px;
       border: 1px solid white;
-      background-color: black;
+      background-color: #3c4653;
       color: white;
     }
   }

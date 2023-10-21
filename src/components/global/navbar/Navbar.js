@@ -37,13 +37,16 @@ const Navbar = () => {
     },
   ];
 
-  console.log("Store",theme);
+
   return (
     <div id="navbar">
       {/* theme or dark/light mode */}
       <div className={theme}>
         <div className="container">
           <div className="navbar-wrapper">
+            <div className="menu-bar">
+              <button style={{backgroundColor:"transparent"}}><img width={30} src={`/assets/icon/${theme === "light" ? "black-menu.png":"white-menu.png"}`} alt="" /></button>
+            </div>
             <div className="logo">
               <Link href="/">Rahmat Ali</Link>
             </div>
@@ -59,7 +62,8 @@ const Navbar = () => {
             <div className="right-side-btn-groups">
               <button className="login-btn">Login</button>
               <button className="theme-btn" onClick={handleMode}>
-                Theme
+             <img width={25} src={`/assets/icon/${theme === "light" ? "brightness.png":"moon.png"}`} alt="" />
+                {/* <span>Theme</span> */}
               </button>
             </div>
           </div>
