@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="container">
           <div className="navbar-wrapper">
             <div className="menu-bar">
-              <button style={{backgroundColor:"transparent"}}><img width={30} src={`/assets/icon/${theme === "light" ? "black-menu.png":"white-menu.png"}`} alt="" /></button>
+              <button style={{backgroundColor:"transparent"}}><img width={30} src={`/assets/icon/${!theme === "light" ? "white-menu.png":"black-menu.png"}`} alt="" /></button>
             </div>
             <div className="logo">
               <Link href="/">Rahmat Ali</Link>

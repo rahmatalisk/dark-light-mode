@@ -40,6 +40,7 @@
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     transition: all 0.3s ease-in-out;
+    border: 1px solid black;
     @media all and (max-width: 1024px) {
       display: none;
     }
@@ -85,6 +86,7 @@
     display: flex;
     align-items: center;
     padding: 5px 25px;
+    border: 1px solid black;
     span {
       @media all and (max-width: 575px) {
         display: none;
